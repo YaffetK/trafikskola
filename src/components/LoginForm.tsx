@@ -57,53 +57,55 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="flex items-center justify-center max-w-lg p-10 mx-auto min-w-max space-y-8 text-black w-full bg-gray-200 border border-black">
-      <Form {...form}>
-        <form onSubmit={handleInput}>
-          <FormField
-            control={form.control}
-            name="username"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel htmlFor="username">Username</FormLabel>
-                <FormControl>
-                  <Input
-                    id="username"
-                    placeholder="enter username"
-                    {...field}
-                  />
-                </FormControl>
+    <div className="flex items-center justify-center max-w-lg p-10 mx-auto w-4/5 space-y-8 text-black bg-gray-200 border border-black rounded-md scree">
+      <div>
+        <Form {...form}>
+          <form onSubmit={handleInput}>
+            <FormField
+              control={form.control}
+              name="username"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel htmlFor="username">Username</FormLabel>
+                  <FormControl>
+                    <Input
+                      id="username"
+                      placeholder="enter username"
+                      {...field}
+                    />
+                  </FormControl>
 
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
-          <FormField
-            control={form.control}
-            name="password"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel htmlFor="password">Password</FormLabel>
-                <FormControl>
-                  <Input
-                    id="password"
-                    type="password"
-                    className=" border-none"
-                    placeholder="enter password"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+            <FormField
+              control={form.control}
+              name="password"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel htmlFor="password">Password</FormLabel>
+                  <FormControl>
+                    <Input
+                      id="password"
+                      type="password"
+                      className=" border-none"
+                      placeholder="enter password"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
-          <Button type="submit" size="lg" className="w-full my-4">
-            Submit
-          </Button>
-        </form>
-      </Form>
+            <Button type="submit" size="lg" className="w-full my-4">
+              Submit
+            </Button>
+          </form>
+        </Form>
+      </div>
     </div>
   );
 };
